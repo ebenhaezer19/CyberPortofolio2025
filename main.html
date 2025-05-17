@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krisopras Eben Haezer - Cybersecurity Ethusiast & Frontend Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<canvas id="matrix-canvas"></canvas>
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-opacity-80 bg-[#0d1117] border-b border-[#30363d]">
+<div class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+        <span class="text-[#58a6ff] text-xl font-bold terminal-font">~/krisopras$</span>
+    </div>
+    
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+    
+    <div id="menu" class="hidden md:flex w-full md:w-auto mt-4 md:mt-0">
+        <ul class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 terminal-font">
+            <li><a href="#home" class="nav-link active text-white hover:text-[#58a6ff]">Home</a></li>
+            <li><a href="#about" class="nav-link text-white hover:text-[#58a6ff]">About</a></li>
+            <li><a href="#skills" class="nav-link text-white hover:text-[#58a6ff]">Skills</a></li>
+            <li><a href="#projects" class="nav-link text-white hover:text-[#58a6ff]">Projects</a></li>
+            <li><a href="#certifications" class="nav-link text-white hover:text-[#58a6ff]">Certifications</a></li>
+            <li><a href="#contact" class="nav-link text-white hover:text-[#58a6ff]">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="py-20 md:py-32 px-4 relative overflow-hidden">
+<div class="container mx-auto">
+    <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-3/5 mb-10 md:mb-0">
+            <div class="terminal-bg p-6">
+                <div class="terminal-header flex items-center p-2 mb-4">
+                    <div class="terminal-dot terminal-red"></div>
+                    <div class="terminal-dot terminal-yellow"></div>
+                    <div class="terminal-dot terminal-green"></div>
+                    <div class="ml-4 text-sm text-gray-400">krisopras@kali:~</div>
+                </div>
+                <div class="terminal-content terminal-font">
+                    <p class="text-[#58a6ff] mb-2">$ whoami</p>
+                    <p class="text-[#3fb950] mb-4">krisopras</p>
+                    
+                    <p class="text-[#58a6ff] mb-2">$ cat introduction.txt</p>
+                    <div class="mb-4">
+                        <h1 class="text-3xl md:text-5xl font-bold mb-4 text-white">
+                            Krisopras Eben Haezer
+                        </h1>
+                        <p class="text-xl md:text-2xl text-[#e3b341] mb-6">Cybersecurity Ethusiast & Frontend Developer</p>
+                        <p class="text-gray-300 mb-6 max-w-2xl">
+                            Specialized in penetration testing, vulnerability assessment, and security architecture. 
+                            Protecting digital assets with advanced technical expertise and strategic security solutions.
+                        </p>
+                    </div>
+                    
+                    <p class="text-[#58a6ff] mb-2">$ ./get_started.sh</p>
+                    <p class="text-[#3fb950] inline">Initializing secure connection</p>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="#contact" class="btn-primary px-6 py-3 rounded-md font-medium text-white">
+                    <i class="fas fa-shield-alt mr-2"></i> Hire Me
+                </a>
+                <a href="#projects" class="btn-outline px-6 py-3 rounded-md font-medium">
+                    <i class="fas fa-code mr-2"></i> View Projects
+                </a>
+            </div>
+        </div>
+        <div class="md:w-2/5 flex justify-center">
+            <div class="relative flex items-center justify-center">
+                <img src="/assets/image/AKU.jpg" alt="Profile Photo" 
+                     class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-[#3fb950] shadow-lg" />
+                <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-[#3fb950] rounded-full opacity-30"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 px-4">
+<div class="container mx-auto">
+    <div class="terminal-bg p-6 mb-8">
+        <div class="terminal-header flex items-center p-2 mb-4">
+            <div class="terminal-dot terminal-red"></div>
+            <div class="terminal-dot terminal-yellow"></div>
+            <div class="terminal-dot terminal-green"></div>
+            <div class="ml-4 text-sm text-gray-400">about.sh</div>
+        </div>
+        <div class="terminal-font">
+            <p class="text-[#58a6ff] mb-2">$ ./about.sh</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
+        </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+            <p class="text-gray-300 mb-6 terminal-font">
+                <span class="text-[#e3b341]">#!/bin/bash</span><br>
+                <span class="text-[#58a6ff]"># Professional Background</span><br><br>
+                I'm Krisopras Eben Haezer, a dedicated ethusiast on cybersecurity and web development with over 2 years of experience in focusing on research and sensitive data from evolving threats.
+            </p>
+            <p class="text-gray-300 mb-6">
+                My expertise spans across penetration testing, vulnerability assessment, security architecture, and incident response. I'm passionate about staying ahead of emerging threats and implementing robust security measures.
+            </p>
+            <p class="text-gray-300">
+                With a background in computer science and specialized training in cybersecurity, I combine technical expertise with strategic thinking to deliver comprehensive security solutions.
+            </p>
+        </div>
+        <div class="md:w-1/2 terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-4 text-[#e3b341] terminal-font">$ cat experience.log</h3>
+            <div class="mb-6">
+                <div class="flex justify-between mb-1">
+                    <h4 class="font-bold text-white">Codingo Assignment Singapore</h4>
+                    <span class="text-[#58a6ff]">2024 - Present</span>
+                </div>
+                <p class="text-gray-400 mb-2">Web Development</p>
+                <p class="text-gray-300">Learn how to develop a website and make it more secure.</p>
+            </div>
+            <div class="mb-6">
+                <div class="flex justify-between mb-1">
+                    <h4 class="font-bold text-white">GAO Tek (USA Project Internship)</h4>
+                    <span class="text-[#58a6ff]">2023 - 2024</span>
+                </div>
+                <p class="text-gray-400 mb-2">Video Editor</p>
+                <p class="text-gray-300">Learn how to edit a video and make it more secure.</p>
+            </div>
+            <div class="mb-6">
+                <div class="flex justify-between mb-1">
+                    <h4 class="font-bold text-white">ZTM Academy (Zero to Mastery ETH Bootcamp)</h4>
+                    <span class="text-[#58a6ff]">2023 - 2024</span>
+                </div>
+                <p class="text-gray-400 mb-2">Learn How to threat hunting and get certified</p>
+                <p class="text-gray-300">Get certified in threat hunting and become a threat hunter.</p>
+            </div>
+            <div>
+                <div class="flex justify-between mb-1">
+                    <h4 class="font-bold text-white">Merdeka Siber Security (CTF)</h4>
+                    <span class="text-[#58a6ff]">2025</span>
+                </div>
+                <p class="text-gray-400 mb-2">CTF Competition</p>
+                <p class="text-gray-300">Compete in CTF competitions and become a cybersecurity expert.</p>
+            </div><br>
+            <div class="mb-6">
+                <div class="flex justify-between mb-1">
+                    <h4 class="font-bold text-white">Calvin Institute of Technology</h4>
+                    <span class="text-[#58a6ff]">2023 - 2024</span>
+                </div>
+                <p class="text-gray-400 mb-2">GA Assistant</p>
+                <p class="text-gray-300">Work as a GA Assistant and help classroom still clean and organized.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Skills Section -->
+<section id="skills" class="py-20 px-4">
+<div class="container mx-auto">
+    <div class="terminal-bg p-6 mb-8">
+        <div class="terminal-header flex items-center p-2 mb-4">
+            <div class="terminal-dot terminal-red"></div>
+            <div class="terminal-dot terminal-yellow"></div>
+            <div class="terminal-dot terminal-green"></div>
+            <div class="ml-4 text-sm text-gray-400">skills.py</div>
+        </div>
+        <div class="terminal-font">
+            <p class="text-[#58a6ff] mb-2">$ python3 skills.py</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">Technical Skills</h2>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Security Skills</h3>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Penetration Testing</span>
+                    <span class="text-[#58a6ff]">95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Vulnerability Assessment</span>
+                    <span class="text-[#58a6ff]">79%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Incident Response</span>
+                    <span class="text-[#58a6ff]">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Security Architecture</span>
+                    <span class="text-[#58a6ff]">88%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Threat Intelligence</span>
+                    <span class="text-[#58a6ff]">70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 82%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Technical Tools</h3>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Kali Linux</span>
+                    <span class="text-[#58a6ff]">98%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 98%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Metasploit</span>
+                    <span class="text-[#58a6ff]">92%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 92%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Wireshark</span>
+                    <span class="text-[#58a6ff]">90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Burp Suite</span>
+                    <span class="text-[#58a6ff]">94%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 94%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Nmap</span>
+                    <span class="text-[#58a6ff]">96%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 96%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Programming Languages</h3>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Python</span>
+                    <span class="text-[#58a6ff]">70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">Bash Scripting</span>
+                    <span class="text-[#58a6ff]">88%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">PowerShell</span>
+                    <span class="text-[#58a6ff]">78%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span class="text-white">C/C++</span>
+                    <span class="text-[#58a6ff]">75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Soft Skills</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 border border-[#30363d] rounded-md">
+                    <i class="fas fa-users text-[#58a6ff] text-2xl mb-2"></i>
+                    <h4 class="text-white font-medium">Team Leadership</h4>
+                </div>
+                
+                <div class="p-4 border border-[#30363d] rounded-md">
+                    <i class="fas fa-comments text-[#58a6ff] text-2xl mb-2"></i>
+                    <h4 class="text-white font-medium">Communication</h4>
+                </div>
+                
+                <div class="p-4 border border-[#30363d] rounded-md">
+                    <i class="fas fa-tasks text-[#58a6ff] text-2xl mb-2"></i>
+                    <h4 class="text-white font-medium">Project Management</h4>
+                </div>
+                
+                <div class="p-4 border border-[#30363d] rounded-md">
+                    <i class="fas fa-lightbulb text-[#58a6ff] text-2xl mb-2"></i>
+                    <h4 class="text-white font-medium">Problem Solving</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-4">
+<div class="container mx-auto">
+    <div class="terminal-bg p-6 mb-8">
+        <div class="terminal-header flex items-center p-2 mb-4">
+            <div class="terminal-dot terminal-red"></div>
+            <div class="terminal-dot terminal-yellow"></div>
+            <div class="terminal-dot terminal-green"></div>
+            <div class="ml-4 text-sm text-gray-400">projects.sh</div>
+        </div>
+        <div class="terminal-font">
+            <p class="text-[#58a6ff] mb-2">$ ls -la projects/</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">Featured Projects</h2>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card terminal-bg overflow-hidden rounded-lg">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-shield-alt text-[#e3b341] text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">SecureNet Firewall</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    Advanced firewall solution with AI-powered threat detection and real-time monitoring capabilities.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Machine Learning</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Network Security</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="https://github.com/ebenhaezer19/SDN-Block-System-DDOS-Attack-Simulation" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                        <span class="text-gray-400">4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card terminal-bg overflow-hidden rounded-lg">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bug text-[#f85149] text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Wifrog V1</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    WIFROG is an ethical hacking tool designed for cybersecurity enthusiasts. It employs brute force techniques to test Wi-Fi network security by systematically recovering passwords. Key features include customizable password patterns, length range specification, real-time progress tracking, and a simulation mode for safe learning. WIFROG promotes ethical hacking practices and provides a safe environment for learning and experimentation.       
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Docker</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Vulnerability Assessment</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="https://github.com/ebenhaezer19/WIFROG---v1.0.0" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                        <span class="text-gray-400">4.8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card terminal-bg overflow-hidden rounded-lg">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-network-wired text-[#58a6ff] text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Tracking System Shopee Bot Product</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    A tracking system for Shopee bot product that can track the product from the website and show the product in the system.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Network Analysis</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Machine Learning</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="https://github.com/ebenhaezer19/BOT-MONITOR" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                        <span class="text-gray-400">4.6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card terminal-bg overflow-hidden rounded-lg">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-user-shield text-[#e3b341] text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Crollay</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    IDOR Offensive Attacking tool
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Authentication</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Biometrics</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="https://github.com/ebenhaezer19/crollay" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                        <span class="text-gray-400">4.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project-card terminal-bg overflow-hidden rounded-lg">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-robot text-[#f85149] text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-white">Horror Galery Website</h3>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    A horror gallery website that can display the horror image and video.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Python</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">AI/ML</span>
+                    <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Threat Intelligence</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="https://horrorgallery.vercel.app/" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        View Live Demo
+                    </a>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                        <span class="text-gray-400">4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <!-- Project 7 -->
+    <div class="project-card terminal-bg overflow-hidden rounded-lg">
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+                <i class="fas fa-shield-alt text-[#f85149] text-2xl mr-3"></i>
+                <h3 class="text-xl font-bold text-white">NMAP Advanced Command</h3>
+            </div>
+            <p class="text-gray-300 mb-4">
+                A collection of NMAP advanced commands for network security scanning and analysis.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">React</span>
+                <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">Node.js</span>
+                <span class="px-2 py-1 bg-[#161b22] text-[#58a6ff] text-xs rounded-md">WebSocket</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <a href="https://github.com/ebenhaezer19/NMAP-Advanced-Command" target="_blank" class="btn-outline px-4 py-2 rounded-md text-sm inline-flex items-center">
+                    <i class="fab fa-github mr-2"></i>
+                    View on GitHub
+                </a>
+                <div class="flex items-center">
+                    <i class="fas fa-star text-[#e3b341] mr-1"></i>
+                    <span class="text-gray-400">4.7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-12 text-center">
+        <a href="https://github.com/ebenhaezer19?tab=repositories" target="_blank" class="btn-primary px-6 py-3 rounded-md font-medium text-white inline-flex items-center">
+            <i class="fas fa-code-branch mr-2"></i> View All Projects
+        </a>
+    </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 px-4">
+<div class="container mx-auto">
+    <div class="terminal-bg p-6 mb-8">
+        <div class="terminal-header flex items-center p-2 mb-4">
+            <div class="terminal-dot terminal-red"></div>
+            <div class="terminal-dot terminal-yellow"></div>
+            <div class="terminal-dot terminal-green"></div>
+            <div class="ml-4 text-sm text-gray-400">certifications.txt</div>
+        </div>
+        <div class="terminal-font">
+            <p class="text-[#58a6ff] mb-2">$ cat certifications.txt</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">Certifications & Education</h2>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Professional Certifications</h3>
+            
+            <div class="mb-6">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-certificate text-[#58a6ff] mr-3"></i>
+                    <h4 class="text-white font-bold">Certified Ethical Hacker (CEH)</h4>
+                </div>
+                <p class="text-gray-400 mb-1">ZTM Academy</p>
+                <p class="text-gray-300">Credential ID: UC-9c8798e3-997f-480f-ba58-49af43c98748</p>
+            </div>
+            
+            <div class="mb-6">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-certificate text-[#58a6ff] mr-3"></i>
+                    <h4 class="text-white font-bold">Introduction to Figma</h4>
+                </div>
+                <p class="text-gray-400 mb-1">Belajar.Skill</p>
+                <p class="text-gray-300">Credential ID: FB2025</p>
+            </div>
+            
+            <div class="mb-6">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-certificate text-[#58a6ff] mr-3"></i>
+                    <h4 class="text-white font-bold">Data analysis international certification</h4>
+                </div>
+                <p class="text-gray-400 mb-1">Smart Path</p>
+                <p class="text-gray-300">Credential ID: 17052025</p>
+            </div>
+            
+            <div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-certificate text-[#58a6ff] mr-3"></i>
+                    <h4 class="text-white font-bold">OSINT Masterclass</h4>
+                </div>
+                <p class="text-gray-400 mb-1">X Eye Academy</p>
+                <p class="text-gray-300">Credential ID: UC-f82b9d0f-21ea-4b5a-9824-877e7af98286</p>
+            </div>
+        </div>
+        
+        <div class="terminal-bg p-6">
+            <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Education</h3>
+            
+            <div class="mb-6">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-graduation-cap text-[#58a6ff] mr-3"></i>
+                    <h4 class="text-white font-bold">IT & Big Data Analitycs</h4>
+                </div>
+                <p class="text-gray-400 mb-1">Calvin Institute of Technology</p>
+                <p class="text-gray-300">2022 - Present</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-4">
+<div class="container mx-auto">
+    <div class="terminal-bg p-6 mb-8">
+        <div class="terminal-header flex items-center p-2 mb-4">
+            <div class="terminal-dot terminal-red"></div>
+            <div class="terminal-dot terminal-yellow"></div>
+            <div class="terminal-dot terminal-green"></div>
+            <div class="ml-4 text-sm text-gray-400">contact.sh</div>
+        </div>
+        <div class="terminal-font">
+            <p class="text-[#58a6ff] mb-2">$ ./contact.sh</p>
+            <h2 class="text-3xl font-bold mb-6 text-white">Get In Touch</h2>
+        </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+            <div class="terminal-bg p-6 mb-8">
+                <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Contact Information</h3>
+                
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-envelope text-[#58a6ff] text-xl w-8"></i>
+                        <span class="text-white">krisoprasebenhaezer@gmail.com</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-phone text-[#58a6ff] text-xl w-8"></i>
+                        <span class="text-white">+6282213125287</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-[#58a6ff] text-xl w-8"></i>
+                        <span class="text-white">Jakarta, Indonesia </span>
+                    </div>
+                </div>
+                
+                <h4 class="text-lg font-bold mb-4 text-white">Connect With Me</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/krisopras-eben-haezer-a5961b276/" target="_blank" class="text-[#58a6ff] hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/ebenhaezer19" target="_blank" class="text-[#58a6ff] hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="terminal-bg p-6">
+                <h3 class="text-xl font-bold mb-4 text-[#e3b341] terminal-font">Availability</h3>
+                <p class="text-gray-300 mb-4">
+                    Currently available for security consulting, penetration testing, and advisory roles.
+                </p>
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-[#3fb950] rounded-full mr-2"></div>
+                    <span class="text-[#3fb950] font-medium">Available for new projects</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:w-1/2">
+            <div class="terminal-bg p-6">
+                <h3 class="text-xl font-bold mb-6 text-[#e3b341] terminal-font">Send Me a Message</h3>
+                
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-white mb-2">Name</label>
+                        <input type="text" id="name" class="w-full bg-[#161b22] border border-[#30363d] rounded-md px-4 py-2 text-white focus:outline-none focus:border-[#58a6ff]" placeholder="Your Name">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-white mb-2">Email</label>
+                        <input type="email" id="email" class="w-full bg-[#161b22] border border-[#30363d] rounded-md px-4 py-2 text-white focus:outline-none focus:border-[#58a6ff]" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-white mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full bg-[#161b22] border border-[#30363d] rounded-md px-4 py-2 text-white focus:outline-none focus:border-[#58a6ff]" placeholder="Subject">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-white mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full bg-[#161b22] border border-[#30363d] rounded-md px-4 py-2 text-white focus:outline-none focus:border-[#58a6ff]" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary px-6 py-3 rounded-md font-medium text-white w-full">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Message
+                        </button>
+                        <p class="text-sm text-gray-400 mt-2">This is a demo form. In a real implementation, it would be connected to a backend service.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 px-4 border-t border-[#30363d]">
+<div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+            <p class="text-[#58a6ff] text-xl font-bold terminal-font">~/krisopras$</p>
+            <p class="text-gray-400 mt-2">© 2023 Krisopras Eben Haezer. All rights reserved.</p>
+        </div>
+        
+        <div class="flex space-x-6">
+            <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+            <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+            <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("VpskOpbNQAYDg4ru-"); // Public Key dari EmailJS
+})();
+</script>
+
+<script>
+// Mobile menu toggle
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Update active link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            document.getElementById('menu').classList.add('hidden');
+        }
+    });
+});
+
+// Form submission handler
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_udlpb6n", "template_bnoj6kd", {
+        name: document.getElementById('name').value,
+        message: document.getElementById('message').value,
+        email: document.getElementById('email').value
+    })
+    .then(function(response) {
+        alert('Message Sent Successfully!');
+        document.getElementById('contact-form').reset();
+    }, function(error) {
+        alert('Failed to send message. Please try again.');
+    });
+});
+
+// Matrix animation
+const canvas = document.getElementById('matrix-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const nums = '0123456789';
+const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+const alphabet = katakana + latin + nums + symbols;
+
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const rainDrops = [];
+
+for (let x = 0; x < columns; x++) {
+    rainDrops[x] = 1;
+}
+
+const draw = () => {
+    ctx.fillStyle = 'rgba(13, 17, 23, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#58a6ff';
+    ctx.font = fontSize + 'px monospace';
+    
+    for (let i = 0; i < rainDrops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+        
+        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            rainDrops[i] = 0;
+        }
+        rainDrops[i]++;
+    }
+};
+
+setInterval(draw, 30);
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+// Highlight active section on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+</body>
+</html>
